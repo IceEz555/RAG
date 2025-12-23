@@ -1,0 +1,33 @@
+No,Question,Answer
+1,What is the Intern Task Management System?,A web-based application designed to help teams manage projects track tasks and collaborate effectively.
+2,Why is a task management system needed?,It helps reduce unclear task ownership missed deadlines and poor visibility of project progress.
+3,What problems occur without a task management system?,Teams may experience confusion poor coordination delayed work and lack of accountability.
+4,What are the key features of the system?,Authentication user management project dashboards Kanban boards and real-time task updates.
+5,What roles exist in the system?,The system includes three roles Admin Project Manager and Member.
+6,What can an Admin do?,An Admin can create edit and delete users assign roles view analytics and configure system settings.
+7,Why is the Admin role important?,Admins ensure system security and proper access control.
+8,What can a Project Manager do?,Project Managers can create projects assign members manage tasks and track progress.
+9,Why is the PM role separate from Admin?,PM focuses on project execution while Admin handles system-level management.
+10,What can a Member do?,Members can view assigned projects manage their own tasks and update task status.
+11,Why are Member permissions limited?,To prevent accidental changes and keep project control centralized.
+12,What is a Project?,A Project is a high-level goal or assignment such as a website redesign.
+13,What does a Project contain?,It contains multiple tasks assigned members and a shared objective.
+14,What is a Task?,A Task is a specific unit of work within a project.
+15,What attributes does a Task have?,Tasks include title description assignee priority and due date.
+16,Why should work be broken into tasks?,It improves clarity accountability tracking and workload management.
+17,What are the task statuses in the system?,Tasks move through To Do In Progress In Review and Done.
+18,What does the To Do status mean?,The task has been created but work has not started yet.
+19,What does In Progress mean?,The task is currently being worked on.
+20,What does In Review mean?,The task is completed and awaiting review or verification.
+21,What does Done mean?,The task is fully completed and approved.
+22,Why should tasks in In Progress be limited?,Too many active tasks reduce focus and slow down completion.
+23,What is a Kanban Board?,A Kanban Board is a visual tool used to track task progress and workflow.
+24,How does the Kanban Board work?,Tasks appear as cards that move across columns like To Do In Progress and Done.
+25,Why is the Kanban Board useful?,It provides clear visibility into task status and project workflow.
+26,When should the Kanban Board be reviewed?,It should be reviewed daily and during team meetings.
+27,What does it mean if tasks stay too long in In Progress?,It may indicate overload blocked tasks or process issues.
+28,Who can delete a task?,Only Admins and Project Managers can delete tasks.
+29,Can a Member delete a task?,No Members can only update task status.
+30,How do I become a Project Manager?,Ask an Admin to update your role in the User Management page.
+31,Why can't I see a project?,You may not have been added as a project member.
+32,How do I report a bug?,Create a task with high priority and prefix the title with BUG.

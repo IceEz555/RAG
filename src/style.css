@@ -1,0 +1,115 @@
+section[data-testid='stSidebar'] {
+    background-color: #111;
+    flex-shrink: unset !important;
+
+}
+
+.st-emotion-cache-liupih {
+    width: 100%;
+    padding: 3.5rem 1rem 1rem;
+    max-width: initial;
+    min-width: auto;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+.sub-header-content {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1.8s ease;
+
+    .header-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .header-subtitle {
+        text-align: center;
+        font-size: 16px;
+        color: #666;
+    }
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+}
+
+@media(hover:hover) and (min-width: 600px) and (max-width: 769px) {
+
+    header[data-testid="stHeader"] {
+        display: none;
+    }
+
+    section[data-testid='stSidebar'] {
+        height: 100%;
+        min-width: 95px !important;
+        width: 95px !important;
+        margin-left: 305px;
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s ease;
+        padding-top: 60px;
+        white-space: nowrap;
+    }
+
+    section[data-testid='stSidebar']:hover {
+        min-width: 330px !important;
+    }
+
+    button[kind="header"] {
+        display: none;
+    }
+
+    div[data-testid="collapsedControl"] {
+        display: none;
+    }
+
+}
+
+@media(hover: hover) and (min-width: 769px) {
+
+    header[data-testid="stHeader"] {
+        display: none;
+    }
+
+    section[data-testid='stSidebar'] {
+        height: 100%;
+        min-width: 95px !important;
+        width: 95px !important;
+        transform: translateX(0px);
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s ease;
+        padding-top: 60px;
+        white-space: nowrap;
+    }
+
+    section[data-testid='stSidebar']:hover {
+        min-width: 330px !important;
+    }
+
+    button[kind="header"] {
+        display: none;
+    }
+
+    div[data-testid="collapsedControl"] {
+        display: none;
+    }
+
+}
