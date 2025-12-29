@@ -21,8 +21,7 @@ class ChatRequest(BaseModel):
 def read_root():
     return {"streamlit": "is awesome"}
 
-@app.post("/ask")
+@app.post("/ask") 
 async def ask_rag(request: ChatRequest):
     answer, sources = get_answer(request.query, request.thread_id)
     return {"answer": answer, "sources": sources}
-
