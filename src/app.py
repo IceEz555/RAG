@@ -16,7 +16,7 @@ load_dotenv() # Load environment variables from .env file
 api_key = os.getenv("GOOGLE_API_KEY")
 os.environ["GOOGLE_API_KEY"] = api_key
 model = init_chat_model("google_genai:gemini-2.5-flash-lite")
-embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
 
 # Load existing vector store
 vector_store = InMemoryVectorStore.load('../Vector_Store_RAG', embeddings)
