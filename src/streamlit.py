@@ -1,6 +1,6 @@
 # ui_streamlit.py
-from app import get_answer
 import streamlit as st
+import requests
 from st_chat_message import message
 from st_on_hover_tabs import on_hover_tabs
 
@@ -66,14 +66,28 @@ if tabs == 'Chat Bot':
             {"role": "user", "content": user_input}
         )
 
-        # call RAG system
+        # call RAG system via FastAPI
         if "thread_id" not in st.session_state:
             st.session_state.thread_id = "streamlit_session_1"
 
-        answer, sources = get_answer(
-        user_input,
-        thread_id=st.session_state.thread_id
-        )
+        try:
+            response = requests.post(
+                "http://127.0.0.1:8000/ask",
+                json={
+                    "query": user_input,
+                    "thread_id": st.session_state.thread_id
+                }
+            )
+            if response.status_code == 200:
+                data = response.json()
+                answer = data["answer"]
+                sources = data["sources"]
+            else:
+                answer = f"Error: {response.status_code} - {response.text}"
+                sources = []
+        except Exception as e:
+            answer = f"Connection Error: {str(e)}"
+            sources = []
         message(answer, is_user=False)
         st.session_state.chat_history.append(
             {"role": "assistant", "content": answer}
